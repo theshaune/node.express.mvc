@@ -1,9 +1,16 @@
+/* Import node_modules */
 var express = require('express');
-var router = express.Router();
+var router  = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express Home/index.' });
-});
+/* Import Controller */
+var controller  = require('../controllers/home');
 
+
+/** 
+ * # Define routes
+ */
+router.get('/', controller.index);
+
+
+/* Export */
 module.exports = router;

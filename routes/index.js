@@ -1,7 +1,7 @@
 /* Import routes */
-var aboutRoutes  = require('./about'),
-    homeRoutes   = require('./home'),
-    storeRoutes  = require('./store');
+var about  = require('./about'),
+    home   = require('./home'),
+    store  = require('./store');
 
 /* Define variables */   
 var routes;
@@ -9,9 +9,9 @@ var routes;
 
 /* Setup routes */
 function routes(app) {
-  app.use('/', homeRoutes);
-  app.use('/about', aboutRoutes);
-  app.use('/store', storeRoutes);
+  app.use('/', home);
+  app.use('/about', about);
+  app.use('/store', store);
 }
 
 module.exports = routes
