@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* GET store page. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('index', { title: 'Express Store index.' });
 });
 
 module.exports = router;
